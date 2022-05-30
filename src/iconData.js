@@ -1,14 +1,8 @@
 import { SiRedux } from 'react-icons/si';
 
 import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { AiFillGithub } from 'react-icons/ai';
-import { VscBracketError } from 'react-icons/vsc';
-import {
-  SiTypescript,
-  SiTailwindcss,
-  SiExpress,
-  SiChakraui,
-} from 'react-icons/si';
+
+import { SiTypescript, SiChakraui } from 'react-icons/si';
 
 export default [
   {

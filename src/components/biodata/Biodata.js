@@ -1,4 +1,3 @@
-import React from 'react';
 import './biodata.css';
 import { motion } from 'framer-motion';
 
@@ -15,7 +14,7 @@ const Biodata = () => {
       <div className="introduce">
         <h3>Hi Im Farhan Rafid Syauqi</h3>
         <p>
-          Im Junior Fullstack Web Developer And You Can Find Me In{' '}
+          Im Junior Fullstack Web Developer And You Can Find Me On{' '}
           <a href="https://github.com/FarhanRafid97" target="_blank">
             MyGithub
           </a>{' '}

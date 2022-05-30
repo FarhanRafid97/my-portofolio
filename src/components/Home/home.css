@@ -23,7 +23,6 @@
   row-gap: 15px;
   display: flex;
   align-items: center;
-  justify-content: start;
   flex-direction: column;
   background-color: blanchedalmond;
 }
