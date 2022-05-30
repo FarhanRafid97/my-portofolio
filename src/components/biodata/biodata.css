@@ -1,0 +1,37 @@
+.biodata {
+  padding: 25px;
+  width: 60%;
+  height: 200px;
+  position: fixed;
+  left: 50%;
+  top: 35.2%;
+  transform: translate(-50%, 0);
+  display: flex;
+  text-align: start;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  z-index: 97;
+  font-size: 28px;
+}
+.introduce {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: 0px 1px 15px rgba(0, 0, 0, 0.95);
+  color: white;
+  letter-spacing: 0.1rem;
+  filter: brightness(200%);
+}
+.introduce h3 {
+  margin: 0;
+  padding: 0;
+}
+.introduce p {
+  font-size: 22px;
+  font-weight: 200;
+}
+.introduce p a {
+  color: rgb(126, 53, 53);
+}
