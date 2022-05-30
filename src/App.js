@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from 'react';
-
-import backgroundIcon from './backgroundIcon';
 import './App.css';
 import './bgIcon.css';
 
