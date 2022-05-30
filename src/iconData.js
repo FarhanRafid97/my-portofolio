@@ -4,7 +4,7 @@ import { FaReact, FaNodeJs } from 'react-icons/fa';
 
 import { SiTypescript, SiChakraui } from 'react-icons/si';
 
-export default [
+export const iconData = [
   {
     name: 'redux',
     component: <SiRedux />,

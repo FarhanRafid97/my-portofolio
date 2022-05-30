@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import backgroundIcon from './backgroundIcon';
-import iconData from './iconData';
+import { iconBg } from './backgroundIcon';
+import { iconData } from './iconData';
 
 const Background = () => {
   return (
@@ -20,7 +20,7 @@ const Background = () => {
         </motion.div>
       ))}
 
-      {backgroundIcon.map((bg, index) => (
+      {iconBg.map((bg, index) => (
         <div key={index} className={`background ${bg.name}`}>
           {bg.component}
         </div>

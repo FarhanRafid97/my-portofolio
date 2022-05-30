@@ -15,14 +15,8 @@ const Biodata = () => {
         <h3>Hi Im Farhan Rafid Syauqi</h3>
         <p>
           Im Junior Fullstack Web Developer And You Can Find Me On{' '}
-          <a href="https://github.com/FarhanRafid97" target="_blank">
-            MyGithub
-          </a>{' '}
-          Or{' '}
-          <a
-            href="https://www.linkedin.com/in/farhan-rafid-syauqi-268a9820b/"
-            target="_blank"
-          >
+          <a href="https://github.com/FarhanRafid97">MyGithub</a> Or{' '}
+          <a href="https://www.linkedin.com/in/farhan-rafid-syauqi-268a9820b/">
             MyLinkedin
           </a>
         </p>

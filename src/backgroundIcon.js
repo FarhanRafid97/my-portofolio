@@ -9,7 +9,7 @@ import {
   SiJavascript,
 } from 'react-icons/si';
 
-export default [
+export const iconBg = [
   {
     name: 'bgRedux',
     component: <SiRedux />,
