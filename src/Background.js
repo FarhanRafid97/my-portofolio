@@ -6,8 +6,9 @@ import iconData from './iconData';
 const Background = () => {
   return (
     <>
-      {iconData.map((icon) => (
+      {iconData.map((icon, index) => (
         <motion.div
+          key={index}
           className={`motionIcon ${icon.name}`}
           animate={{
             y: icon.y,
@@ -20,8 +21,10 @@ const Background = () => {
         </motion.div>
       ))}
 
-      {backgroundIcon.map((bg) => (
-        <div className={`background ${bg.name}`}>{bg.component}</div>
+      {backgroundIcon.map((bg, index) => (
+        <div key={index} className={`background ${bg.name}`}>
+          {bg.component}
+        </div>
       ))}
     </>
   );
