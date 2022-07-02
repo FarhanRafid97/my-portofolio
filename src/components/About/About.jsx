@@ -1,5 +1,5 @@
-import { Container, chakra, Box, keyframes } from '@chakra-ui/react';
-import { motion, isValidMotionProp } from 'framer-motion';
+import { chakra, Container } from '@chakra-ui/react';
+import { isValidMotionProp, motion } from 'framer-motion';
 
 const ChakraBox = chakra(motion.div, {
   /**

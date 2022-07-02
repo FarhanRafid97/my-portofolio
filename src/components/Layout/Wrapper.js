@@ -6,8 +6,8 @@ const Wrapper = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Box w="100%" mt="89px">
-        <Box w="80%" margin="auto">
+      <Box w="100%" mt="87px" bg="gray.50">
+        <Box w="74%" margin="auto">
           {children}
         </Box>
       </Box>
