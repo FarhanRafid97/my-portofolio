@@ -1,9 +1,9 @@
-import { Box, chakra, Flex, Image, Link, Text } from '@chakra-ui/react';
+import { chakra, Flex, Text } from '@chakra-ui/react';
 import { isValidMotionProp, motion } from 'framer-motion';
 import React from 'react';
-import { AiOutlineStar, BsFillSunFill } from 'react-icons/ai';
 import p1 from '../../img/p1.png';
 import p3 from '../../img/p3.png';
+import p2 from '../../img/p2.png';
 import Card from './Card';
 import './Home.css';
 
@@ -29,9 +29,9 @@ const Home = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
         mb={28}
-        fontSize="40px"
+        fontSize={['24px', '40px']}
         fontWeight="bold"
-        width="600px"
+        maxW="600px"
         textAlign="center"
       >
         Fullstack Web Developer Based In Indonesia
@@ -55,7 +55,7 @@ const Home = () => {
           <Text
             py={6}
             px={7}
-            fontSize="20px"
+            fontSize={['16px', '20px']}
             textAlign="end"
             fontWeight="bold"
             color="#999999"
@@ -70,14 +70,14 @@ const Home = () => {
             imgUrl={p1}
             bgColor="#B8D6C5"
             color="gray.50"
-            hoverColor="gray.600"
+            hoverColor="green.600"
             link="https://covid-19-case.vercel.app/"
           />
         </Flex>
         <Flex
           direction="column"
           flexBasis="50%"
-          rowGap="25px"
+          rowGap="50px"
           alignItems="center"
         >
           <Card
@@ -88,6 +88,16 @@ const Home = () => {
             color="gray.50"
             hoverColor="gray.400"
             link="https://frs-secret-shop.vercel.app/"
+          />
+
+          <Card
+            title="My Github Page"
+            body="you can check out some projects I've been working on"
+            imgUrl={p2}
+            bgColor="#1985a1"
+            color="white"
+            hoverColor="blue.1  00"
+            link="https://github.com/FarhanRafid97"
           />
         </Flex>
       </ChakraBox>

@@ -1,13 +1,8 @@
-import { Box, Flex, Image, Link, Text, chakra } from '@chakra-ui/react';
+import { Box, chakra, Flex, Image, Link, Text } from '@chakra-ui/react';
+import { isValidMotionProp, motion } from 'framer-motion';
 import React from 'react';
 import { AiOutlineStar } from 'react-icons/ai';
-import p1 from '../../img/p1.png';
 import './Home.css';
-import { isValidMotionProp, motion } from 'framer-motion';
-
-const HeadingChakra = chakra(motion.h2, {
-  shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === 'children',
-});
 
 const ChakraBox = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === 'children',
@@ -17,15 +12,14 @@ const Card = ({ title, body, imgUrl, bgColor, color, hoverColor, link }) => {
   return (
     <Link
       className="linkPorto"
-      w="90%"
+      w={['340px', '90%']}
       href={link}
       target="_blank"
-      _hover={{ textDecoration: 'none ' }}
       position="relative"
       bg={bgColor}
       transition="0.3s"
       color={color}
-      _hover={{ color: hoverColor }}
+      _hover={{ color: hoverColor, textDecoration: 'none ' }}
     >
       <Flex
         direction="column"
@@ -53,7 +47,7 @@ const Card = ({ title, body, imgUrl, bgColor, color, hoverColor, link }) => {
             </Text>
           </Flex>
 
-          <Text w="350px" mt={8} fontSize="18px" fontWeight="medium">
+          <Text maxW="350px" mt={8} fontSize="18px" fontWeight="medium">
             {body}
           </Text>
         </Box>
