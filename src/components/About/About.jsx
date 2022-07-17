@@ -12,17 +12,9 @@ import { isValidMotionProp, motion } from 'framer-motion';
 import myProfile from '../../img/me.png';
 
 const ChakraBox = chakra(motion.div, {
-  /**
-   * Allow motion props and the children prop to be forwarded.
-   * All other chakra props not matching the motion props will still be forwarded.
-   */
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === 'children',
 });
 const ChakraText = chakra(motion.p, {
-  /**
-   * Allow motion props and the children prop to be forwarded.
-   * All other chakra props not matching the motion props will still be forwarded.
-   */
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === 'children',
 });
 
