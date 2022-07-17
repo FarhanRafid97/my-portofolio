@@ -2,8 +2,9 @@ import { chakra, Flex, Text } from '@chakra-ui/react';
 import { isValidMotionProp, motion } from 'framer-motion';
 import React from 'react';
 import p1 from '../../img/p1.png';
-import p3 from '../../img/p3.png';
 import p2 from '../../img/p2.png';
+import p3 from '../../img/p3.png';
+import p4 from '../../img/p4.png';
 import Card from './Card';
 import './Home.css';
 
@@ -49,7 +50,7 @@ const Home = () => {
         <Flex
           direction="column"
           alignItems="center"
-          rowGap="25px"
+          rowGap="50px"
           flexBasis="50%"
         >
           <Text
@@ -61,7 +62,7 @@ const Home = () => {
             color="#999999"
           >
             My name is farhan.I'm fullstack web developer,i like using
-            react/nextjs on frontend and express on backend .Please feel free to
+            react/nextjs on frontend and nodejs on backend. Please feel free to
             check out some projects I've been working on
           </Text>
           <Card
@@ -71,7 +72,16 @@ const Home = () => {
             bgColor="#B8D6C5"
             color="gray.50"
             hoverColor="green.600"
-            link="https://covid-19-case.vercel.app/"
+            link="https://covid-19-case.vercel.app"
+          />
+          <Card
+            title="On progress"
+            body="Build anonymous message like ngl"
+            imgUrl={p4}
+            bgColor="#e29578"
+            color="gray.50"
+            hoverColor="green.600"
+            link="https://github.com/FarhanRafid97/ngl_clone"
           />
         </Flex>
         <Flex
@@ -96,7 +106,7 @@ const Home = () => {
             imgUrl={p2}
             bgColor="#1985a1"
             color="white"
-            hoverColor="blue.1  00"
+            hoverColor="blue.200"
             link="https://github.com/FarhanRafid97"
           />
         </Flex>

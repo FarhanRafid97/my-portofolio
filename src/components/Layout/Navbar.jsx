@@ -22,9 +22,10 @@ const Navbar = () => {
       width="100%"
       padding="30px 0"
       fontSize="18px"
-      bg="gray.100"
+      bg="white"
       color="black"
       position="fixed"
+      borderBottom="1px solid #dbdbdb"
       top="0"
       zIndex="99"
     >
@@ -62,8 +63,9 @@ const Navbar = () => {
             _hover={{ textDecoration: 'none' }}
             className="navigasiLink"
             position="relative"
+            color="gray.400"
             as={NavLink}
-            _activeLink={{ color: 'gray.400  ' }}
+            _activeLink={{ color: 'black' }}
             to="/"
           >
             Home
@@ -72,9 +74,10 @@ const Navbar = () => {
             _hover={{ textDecoration: 'none' }}
             className="navigasiLink"
             position="relative"
+            color="gray.400"
             as={NavLink}
             to="/about"
-            _activeLink={{ color: 'gray.400' }}
+            _activeLink={{ color: 'black' }}
           >
             About
           </Link>
