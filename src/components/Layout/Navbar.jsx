@@ -17,6 +17,9 @@ const ChakraBox = chakra(motion.div, {
 });
 const Navbar = () => {
   const { toggleColorMode } = useColorMode();
+  const bgNavbar = useColorModeValue('white', 'gray.700');
+  const navMenu = useColorModeValue('black', 'white');
+  const navActive = useColorModeValue('gray.400', 'gray.500');
 
   const IconDarkMode = useColorModeValue(<BsFillMoonFill />, <BsFillSunFill />);
   return (
@@ -24,7 +27,7 @@ const Navbar = () => {
       width="100%"
       padding="30px 0"
       fontSize="18px"
-      bg="white"
+      bg={bgNavbar}
       color="black"
       position="fixed"
       borderBottom="1px solid #dbdbdb"
@@ -32,7 +35,7 @@ const Navbar = () => {
       zIndex="99"
     >
       <Flex
-        width="74%"
+        width={['74%', '74%', '85%', '74%']}
         justifyContent="space-between"
         margin="auto"
         fontWeight="bold"
@@ -44,6 +47,7 @@ const Navbar = () => {
             top="1px"
             left="-35px"
             fontSize="25px"
+            color={navMenu}
             transform="rotate(-45deg)"
             animate={{
               opacity: [0, 1, 0],
@@ -56,37 +60,43 @@ const Navbar = () => {
           >
             <GiFragmentedSword />
           </ChakraBox>
-          <Text position="absolute" zIndex="10">
+          <Text color={navMenu} position="absolute" zIndex="10">
             FARHAN
           </Text>
         </Box>
         <Flex columnGap="15px" alignItems="center">
-          <Link
-            display={['none', 'none', 'none', 'flex']}
-            _hover={{ textDecoration: 'none' }}
-            className="navigasiLink"
-            position="relative"
-            color="gray.400"
-            as={NavLink}
-            _activeLink={{ color: 'black' }}
-            to="/"
-          >
-            Home
-          </Link>
-          <Link
-            display={['none', 'none', 'none', 'flex']}
-            _hover={{ textDecoration: 'none' }}
-            className="navigasiLink"
-            position="relative"
-            color="gray.400"
-            as={NavLink}
-            to="/about"
-            _activeLink={{ color: 'black' }}
-          >
-            About
-          </Link>
-          <Box onClick={toggleColorMode}>{IconDarkMode}</Box>
-          <MenuNav />
+          <Flex columnGap="15px">
+            <Link
+              display={['none', 'none', 'none', 'flex']}
+              _hover={{ textDecoration: 'none' }}
+              className="navigasiLink"
+              position="relative"
+              color={navMenu}
+              as={NavLink}
+              _activeLink={{ color: navActive }}
+              to="/"
+            >
+              Home
+            </Link>
+            <Link
+              display={['none', 'none', 'none', 'flex']}
+              _hover={{ textDecoration: 'none' }}
+              className="navigasiLink"
+              position="relative"
+              color={navMenu}
+              as={NavLink}
+              to="/about"
+              _activeLink={{ color: navActive }}
+            >
+              About
+            </Link>
+          </Flex>
+          <Box mt={[0, 0, 0, '7px']} color={navMenu} onClick={toggleColorMode}>
+            {IconDarkMode}
+          </Box>
+          <Flex color={navMenu} display={['flex', 'flex', 'flex', 'none']}>
+            <MenuNav />
+          </Flex>
         </Flex>
       </Flex>
     </Box>

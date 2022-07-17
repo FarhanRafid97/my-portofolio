@@ -17,6 +17,7 @@ const ChakraBox = chakra(motion.div, {
 });
 
 const Home = () => {
+  const fontColor = useColorModeValue('black', 'white');
   return (
     <Flex
       py="35px"
@@ -33,6 +34,7 @@ const Home = () => {
         fontSize={['24px', '40px']}
         fontWeight="bold"
         maxW="600px"
+        color={fontColor}
         textAlign="center"
       >
         Fullstack Web Developer Based In Indonesia

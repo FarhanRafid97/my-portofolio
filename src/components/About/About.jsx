@@ -2,11 +2,11 @@ import {
   Box,
   chakra,
   Flex,
-  HStack,
   Heading,
   Image,
   Text,
   VStack,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import { isValidMotionProp, motion } from 'framer-motion';
 import myProfile from '../../img/me.png';
@@ -27,6 +27,7 @@ const ChakraText = chakra(motion.p, {
 });
 
 const About = () => {
+  const boxBg = useColorModeValue('black', 'white');
   const word = 'Hi welcome To my page';
   const wordArray = word.split('');
   console.log(wordArray);
@@ -34,14 +35,14 @@ const About = () => {
     <Box>
       <Flex
         direction={['column', 'column', 'column', 'row']}
-        minH="70vh"
+        minH="80vh"
         overflow="hidden"
       >
-        <Box flex="1.2" paddingTop={['20px']}>
-          <Flex>
+        <Box flex="1.2">
+          <Flex mt="70px">
             {wordArray.map((word, i) => (
               <ChakraText
-                fontSize={['20px', '24px']}
+                fontSize={['1.1rem', '24px']}
                 ml={word === ' ' ? '8px' : 0}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -60,9 +61,9 @@ const About = () => {
             animate={{ scaleX: '100%', transformOrigin: 'left' }}
             transition={{ duration: 1.5, ease: 'easeOut' }}
             h="2px"
-            w={['200px', '240px']}
+            w={['200px', '270px']}
             mb="4px"
-            backgroundColor="black"
+            backgroundColor={boxBg}
           />
           <ChakraBox
             initial={{ scaleX: 0 }}
@@ -71,7 +72,7 @@ const About = () => {
             mb={8}
             w={['170px', '240px']}
             h="2px"
-            backgroundColor="black"
+            backgroundColor={boxBg}
           />
           <ChakraText
             fontSize={['18px', '24px']}
@@ -107,11 +108,11 @@ const About = () => {
           <Flex
             alignItems="center"
             columnGap="35px"
-            direction="column"
+            direction={['column', 'column', 'row', 'row']}
             justifyContent="center"
             p={5}
             shadow="md"
-            w="80%"
+            w={['90%', '', '100%', '80%']}
             borderWidth="1px"
           >
             <Box>
@@ -121,52 +122,71 @@ const About = () => {
               />
             </Box>
             <Flex
-              direction={['column', 'row']}
+              direction={['column', 'column', 'column', 'row']}
+              rowGap={['15px', '5px', '5px']}
               alignItems="center"
-              rowGap="15px"
               flex="1.5"
+              justifyContent="space-between"
+              px="15px"
               my={4}
             >
-              <Heading fontSize="xl">Binar Academy</Heading>
-              <Text color="gray.400" fontSize={['12px', '24px']} mt={4}>
+              <Heading fontSize={['xs', '', 'md', 'xl']}>Binar Academy</Heading>
+              <Text
+                color="gray.400"
+                fontSize={['10px', '12px', '12px', '18px']}
+                mt={[4, 4, 4, 0]}
+              >
                 Fullstack web developer
               </Text>
             </Flex>
 
-            <Text>feb-2022 - sep-2022</Text>
+            <Text fontSize={['12px', '12px', '12px', '18px']}>
+              feb-2022 - sep-2022
+            </Text>
           </Flex>
         </VStack>
         <VStack mb={8}>
           <Flex
             alignItems="center"
             columnGap="35px"
-            direction="column"
+            direction={['column', 'column', 'row', 'row']}
             justifyContent="center"
             p={5}
             shadow="md"
-            w="80%"
+            w={['90%', '', '100%', '80%']}
             borderWidth="1px"
           >
             <Box>
               <Image
                 src="https://cdn.kibrispdr.org/data/119/download-logo-upi-yptk-padang-png-1.jpg"
                 w="100px"
+                h="80px"
               />
             </Box>
             <Flex
-              direction={['column', 'row']}
+              direction={['column', 'column', 'column', 'row']}
+              rowGap={['15px', '5px', '5px']}
               alignItems="center"
-              rowGap="15px"
               flex="1.5"
+              justifyContent="space-between"
+              px="15px"
               my={4}
             >
-              <Heading fontSize={['md', 'xl']}>Upi YPTK Padang</Heading>
-              <Text color="gray.400" fontSize={['12px', '24px']} mt={4}>
+              <Heading fontSize={['xs', '', 'md', 'xl']}>
+                Upi YPTK Padang
+              </Heading>
+              <Text
+                color="gray.400"
+                fontSize={['10px', '12px', '12px', '18px']}
+                mt={[4, 4, 4, 0]}
+              >
                 Computer Sience
               </Text>
             </Flex>
 
-            <Text>feb-2022 - sep-2022</Text>
+            <Text fontSize={['12px', '12px', '12px', '18px']}>
+              feb-2022 - sep-2022
+            </Text>
           </Flex>
         </VStack>
       </ChakraBox>

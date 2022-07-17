@@ -1,17 +1,24 @@
-import { ButtonGroup, Flex, IconButton, Text } from '@chakra-ui/react';
+import {
+  ButtonGroup,
+  Flex,
+  IconButton,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import * as React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
+  const bgFooter = useColorModeValue('white', 'gray.700');
   return (
     <Flex
       w="100%"
       as="footer"
+      bg={bgFooter}
       role="contentinfo"
       py={{ base: '6', md: '12' }}
       borderTop="1px solid #dbdbdb"
       justifyContent="center"
-      backgroundColor="white"
     >
       <Flex
         justifyContent="center"

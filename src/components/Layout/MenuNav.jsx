@@ -14,12 +14,11 @@ const MenuNav = () => {
           <Link
             _hover={{ textDecoration: 'none' }}
             position="relative"
-            color="gray.400"
             as={NavLink}
             to="/"
-            fontSize="24px"
+            fontSize="20px"
             w="100%"
-            _activeLink={{ color: 'black' }}
+            _activeLink={{ color: 'gray.400' }}
           >
             Home
           </Link>
@@ -29,11 +28,10 @@ const MenuNav = () => {
             textAlign="center"
             _hover={{ textDecoration: 'none' }}
             position="relative"
-            color="gray.400"
             as={NavLink}
-            fontSize="24px"
+            fontSize="20px"
             to="/about"
-            _activeLink={{ color: 'black' }}
+            _activeLink={{ color: 'gray.400' }}
           >
             About
           </Link>
