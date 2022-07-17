@@ -172,12 +172,12 @@ const About = () => {
                 fontSize={['10px', '12px', '12px', '18px']}
                 mt={[4, 4, 4, 0]}
               >
-                Computer Sience
+                Computer Science
               </Text>
             </Flex>
 
             <Text fontSize={['12px', '12px', '12px', '18px']}>
-              feb-2022 - sep-2022
+              2015 - sep-2020
             </Text>
           </Flex>
         </VStack>
