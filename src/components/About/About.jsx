@@ -1,4 +1,13 @@
-import { chakra, Box, HStack, Text, Image, Flex } from '@chakra-ui/react';
+import {
+  Box,
+  chakra,
+  Flex,
+  HStack,
+  Heading,
+  Image,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
 import { isValidMotionProp, motion } from 'framer-motion';
 import myProfile from '../../img/me.png';
 
@@ -23,12 +32,16 @@ const About = () => {
   console.log(wordArray);
   return (
     <Box>
-      <HStack h="70vh" overflow="hidden">
-        <Box flex="1.2">
+      <Flex
+        direction={['column', 'column', 'column', 'row']}
+        minH="70vh"
+        overflow="hidden"
+      >
+        <Box flex="1.2" paddingTop={['20px']}>
           <Flex>
             {wordArray.map((word, i) => (
               <ChakraText
-                fontSize="24px"
+                fontSize={['20px', '24px']}
                 ml={word === ' ' ? '8px' : 0}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -43,28 +56,30 @@ const About = () => {
             ))}
           </Flex>
           <ChakraBox
-            initial={{ width: 0 }}
-            animate={{ width: '280px' }}
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: '100%', transformOrigin: 'left' }}
             transition={{ duration: 1.5, ease: 'easeOut' }}
             h="2px"
+            w={['200px', '240px']}
             mb="4px"
             backgroundColor="black"
           />
           <ChakraBox
-            initial={{ width: 0 }}
-            animate={{ width: '230px' }}
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: '100%', transformOrigin: 'left' }}
             transition={{ duration: 1.5, ease: 'easeOut', delay: 0.5 }}
             mb={8}
+            w={['170px', '240px']}
             h="2px"
             backgroundColor="black"
           />
           <ChakraText
-            fontSize="24px"
+            fontSize={['18px', '24px']}
             letterSpacing="0.1rem"
-            fontWeight="bold"
-            initial={{ opacity: 0, y: 50 }}
+            fontWeight="thin"
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: 'easeOut', delay: 1.4 }}
+            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
           >
             I'm a 24 years old fullstack web developer based in Indonesia and
             currently Study on binar academy Bootcamp(fullstack web developer)
@@ -76,10 +91,85 @@ const About = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
           >
-            <Image w="400px" opacity="0.4" src={myProfile} />
+            <Image w="400px" opacity="0.5" src={myProfile} />
           </ChakraBox>
         </Flex>
-      </HStack>
+      </Flex>
+      <ChakraBox
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
+      >
+        <Heading mb={8} textAlign="center">
+          Education
+        </Heading>
+        <VStack mb={8}>
+          <Flex
+            alignItems="center"
+            columnGap="35px"
+            direction="column"
+            justifyContent="center"
+            p={5}
+            shadow="md"
+            w="80%"
+            borderWidth="1px"
+          >
+            <Box>
+              <Image
+                src="https://cdn-images-1.medium.com/max/1200/1*y03gw83Wj4BYk_sD75gNEA.png"
+                w="100px"
+              />
+            </Box>
+            <Flex
+              direction={['column', 'row']}
+              alignItems="center"
+              rowGap="15px"
+              flex="1.5"
+              my={4}
+            >
+              <Heading fontSize="xl">Binar Academy</Heading>
+              <Text color="gray.400" fontSize={['12px', '24px']} mt={4}>
+                Fullstack web developer
+              </Text>
+            </Flex>
+
+            <Text>feb-2022 - sep-2022</Text>
+          </Flex>
+        </VStack>
+        <VStack mb={8}>
+          <Flex
+            alignItems="center"
+            columnGap="35px"
+            direction="column"
+            justifyContent="center"
+            p={5}
+            shadow="md"
+            w="80%"
+            borderWidth="1px"
+          >
+            <Box>
+              <Image
+                src="https://cdn.kibrispdr.org/data/119/download-logo-upi-yptk-padang-png-1.jpg"
+                w="100px"
+              />
+            </Box>
+            <Flex
+              direction={['column', 'row']}
+              alignItems="center"
+              rowGap="15px"
+              flex="1.5"
+              my={4}
+            >
+              <Heading fontSize={['md', 'xl']}>Upi YPTK Padang</Heading>
+              <Text color="gray.400" fontSize={['12px', '24px']} mt={4}>
+                Computer Sience
+              </Text>
+            </Flex>
+
+            <Text>feb-2022 - sep-2022</Text>
+          </Flex>
+        </VStack>
+      </ChakraBox>
     </Box>
   );
 };

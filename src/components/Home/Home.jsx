@@ -1,4 +1,4 @@
-import { chakra, Flex, Text } from '@chakra-ui/react';
+import { chakra, Flex, Text, useColorModeValue } from '@chakra-ui/react';
 import { isValidMotionProp, motion } from 'framer-motion';
 import React from 'react';
 import p1 from '../../img/p1.png';

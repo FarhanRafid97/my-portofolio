@@ -4,7 +4,9 @@ import { NavLink } from 'react-router-dom';
 import { chakra, useColorMode, useColorModeValue } from '@chakra-ui/react';
 import { isValidMotionProp, motion } from 'framer-motion';
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
+
 import { GiFragmentedSword } from 'react-icons/gi';
+import MenuNav from './MenuNav';
 
 const ChakraBox = chakra(motion.div, {
   /**
@@ -60,6 +62,7 @@ const Navbar = () => {
         </Box>
         <Flex columnGap="15px" alignItems="center">
           <Link
+            display={['none', 'none', 'none', 'flex']}
             _hover={{ textDecoration: 'none' }}
             className="navigasiLink"
             position="relative"
@@ -71,6 +74,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link
+            display={['none', 'none', 'none', 'flex']}
             _hover={{ textDecoration: 'none' }}
             className="navigasiLink"
             position="relative"
@@ -81,9 +85,8 @@ const Navbar = () => {
           >
             About
           </Link>
-          <Box colorScheme="blackAlpha" onClick={toggleColorMode} size="lg">
-            {IconDarkMode}
-          </Box>
+          <Box onClick={toggleColorMode}>{IconDarkMode}</Box>
+          <MenuNav />
         </Flex>
       </Flex>
     </Box>
