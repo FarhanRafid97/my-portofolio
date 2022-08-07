@@ -17,7 +17,7 @@ const ChakraBox = chakra(motion.div, {
 });
 const Navbar = () => {
   const { toggleColorMode } = useColorMode();
-  const bgNavbar = useColorModeValue('white', 'gray.700');
+  const bgSubNav = useColorModeValue('gray.100', 'gray.700');
   const navMenu = useColorModeValue('black', 'white');
   const navActive = useColorModeValue('gray.400', 'gray.500');
 
@@ -25,21 +25,23 @@ const Navbar = () => {
   return (
     <Box
       width="100%"
-      padding="30px 0"
+      padding="10px 0"
       fontSize="18px"
-      bg={bgNavbar}
       color="black"
       position="fixed"
-      borderBottom="1px solid #dbdbdb"
       top="0"
       zIndex="99"
     >
       <Flex
-        width={['74%', '74%', '85%', '74%']}
+        width={['90%', '74%', '85%', '80%']}
         justifyContent="space-between"
         margin="auto"
+        mt="15px"
         fontWeight="bold"
         letterSpacing="0.1rem"
+        padding="20px"
+        bg={bgSubNav}
+        borderRadius="15px"
       >
         <Box position="relative">
           <ChakraBox

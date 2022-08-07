@@ -94,7 +94,7 @@ const Home = () => {
         >
           <Card
             title="NEXTJS ECOMMERCE"
-            body="Build Ecommerce With nextjs, redux and chakra ui"
+            body="Build Ecommerce With shoping chart,tech stack: nextjs redux-toolkit and chakra-ui"
             imgUrl={p3}
             bgColor="#3d5a80"
             color="gray.50"

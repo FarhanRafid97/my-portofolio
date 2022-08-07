@@ -8,7 +8,7 @@ const Wrapper = ({ children }) => {
   return (
     <>
       <Navbar />
-      <Box w="100%" mt="87px" bg={bgHome} paddingBottom={24}>
+      <Box w="100%" pt="87px" bg={bgHome} paddingBottom={24}>
         <Box maxW={['80%', '80%', '90%', '1065px']} margin="auto" px={[15, 0]}>
           {children}
         </Box>
