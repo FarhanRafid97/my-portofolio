@@ -33,7 +33,7 @@ const Navbar = () => {
       zIndex="99"
     >
       <Flex
-        width={['90%', '74%', '85%', '80%']}
+        width={['90%', '85%', '85%', '80%']}
         justifyContent="space-between"
         margin="auto"
         mt="15px"

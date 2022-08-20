@@ -43,7 +43,7 @@ const Home = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut', delay: 0.5 }}
-        display="flex"
+        display={['block', 'block', 'block', 'flex']}
         flexWrap="wrap"
         rowGap="25px"
         w="100%"
@@ -89,6 +89,7 @@ const Home = () => {
         <Flex
           direction="column"
           flexBasis="50%"
+          mt={[25, 25, 50, 25]}
           rowGap="50px"
           alignItems="center"
         >

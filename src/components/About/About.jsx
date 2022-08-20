@@ -67,7 +67,7 @@ const About = () => {
             backgroundColor={boxBg}
           />
           <ChakraText
-            fontSize={['18px', '24px']}
+            fontSize={['18px', '18px', '19px', '24px']}
             letterSpacing="0.1rem"
             fontWeight="thin"
             initial={{ opacity: 0, y: 30 }}
@@ -75,7 +75,8 @@ const About = () => {
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.7 }}
           >
             I'm a 24 years old fullstack web developer based in Indonesia and
-            currently Study on binar academy Bootcamp(fullstack web developer)
+            currently Study on Bootcamp Binar Academy (fullstack web
+            development)
           </ChakraText>
         </Box>
         <Flex justifyContent="center" alignItems="center" flex="1">
