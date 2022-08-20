@@ -29,6 +29,7 @@ const About = () => {
         direction={['column', 'column', 'column', 'row']}
         minH="80vh"
         overflow="hidden"
+        px={['0px', '0px', '0px', '50px']}
       >
         <Box flex="1.2">
           <Flex mt="70px">
