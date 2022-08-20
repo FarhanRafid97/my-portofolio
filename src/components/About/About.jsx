@@ -22,7 +22,7 @@ const About = () => {
   const boxBg = useColorModeValue('black', 'white');
   const word = 'Hi welcome To my page';
   const wordArray = word.split('');
-  console.log(wordArray);
+
   return (
     <Box>
       <Flex
@@ -34,6 +34,7 @@ const About = () => {
           <Flex mt="70px">
             {wordArray.map((word, i) => (
               <ChakraText
+                key={i}
                 fontSize={['1.1rem', '24px']}
                 ml={word === ' ' ? '8px' : 0}
                 initial={{ opacity: 0 }}
@@ -49,9 +50,6 @@ const About = () => {
             ))}
           </Flex>
           <ChakraBox
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: '100%', transformOrigin: 'left' }}
-            transition={{ duration: 1.5, ease: 'easeOut' }}
             h="2px"
             w={['200px', '270px']}
             mb="4px"
