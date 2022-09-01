@@ -2,7 +2,7 @@ import { chakra, Flex, Text, useColorModeValue } from '@chakra-ui/react';
 import { isValidMotionProp, motion } from 'framer-motion';
 import React from 'react';
 import p1 from '../../img/p1.png';
-import p2 from '../../img/p2.png';
+import p5 from '../../img/p5.png';
 import p3 from '../../img/p3.png';
 import p4 from '../../img/p4.png';
 import Card from './Card';
@@ -71,18 +71,18 @@ const Home = () => {
             title="COVID 19 CASE"
             body="Update About Covid 19 case and death"
             imgUrl={p1}
-            bgColor="#B8D6C5"
+            bgColor="#3d5a80"
             color="gray.50"
-            hoverColor="green.600"
+            hoverColor="gray.400"
             link="https://covid-19-case.vercel.app"
           />
           <Card
             title="On progress"
-            body="Build anonymous message like ngl"
+            body="Build anonymous message like ngl with Nextjs,Graphql,Typescript"
             imgUrl={p4}
-            bgColor="#e29578"
+            bgColor="#3d5a80"
             color="gray.50"
-            hoverColor="green.600"
+            hoverColor="gray.400"
             link="https://github.com/FarhanRafid97/ngl_clone"
           />
         </Flex>
@@ -95,7 +95,7 @@ const Home = () => {
         >
           <Card
             title="NEXTJS ECOMMERCE"
-            body="Build Ecommerce With shoping chart,tech stack: nextjs redux-toolkit and chakra-ui"
+            body="Build Ecommerce With nextjs,redux-toolkit,chakra-ui,Typescript"
             imgUrl={p3}
             bgColor="#3d5a80"
             color="gray.50"
@@ -104,13 +104,13 @@ const Home = () => {
           />
 
           <Card
-            title="My Github Page"
-            body="you can check out some projects I've been working on"
-            imgUrl={p2}
-            bgColor="#1985a1"
-            color="white"
-            hoverColor="blue.200"
-            link="https://github.com/FarhanRafid97"
+            title="Realtime Chatting App"
+            body="Build a realtime chat app with Websocket,Typescript,Tailwind"
+            imgUrl={p5}
+            bgColor="#3d5a80"
+            color="gray.50"
+            hoverColor="gray.400"
+            link="https://github.com/FarhanRafid97/chatt_app"
           />
         </Flex>
       </ChakraBox>

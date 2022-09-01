@@ -19,6 +19,7 @@ const Card = ({ title, body, imgUrl, bgColor, color, hoverColor, link }) => {
       bg={bgColor}
       transition="0.3s"
       color={color}
+      borderRadius="7px"
       _hover={{ color: hoverColor, textDecoration: 'none ' }}
     >
       <Flex
