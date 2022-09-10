@@ -67,23 +67,28 @@ const Home = () => {
             react/nextjs on frontend and nodejs on backend. Please feel free to
             check out some projects I've been working on
           </Text>
+
+          <Card
+            title="On progress"
+            body="Build Pokemon Collection with Typescript,Nextjs,Graphql-request,Redux-toolkit,Chakra-ui"
+            imgUrl={p4}
+            bgColor="#3d5a80"
+            color="gray.50"
+            widthImg="90%"
+            borderRadius="7px"
+            hoverColor="gray.400"
+            link="https://my-pokemon-collection.vercel.app/"
+          />
           <Card
             title="COVID 19 CASE"
             body="Update About Covid 19 case and death"
             imgUrl={p1}
             bgColor="#3d5a80"
             color="gray.50"
+            widthImg="70%"
             hoverColor="gray.400"
+            borderRadius="15px"
             link="https://covid-19-case.vercel.app"
-          />
-          <Card
-            title="On progress"
-            body="Build anonymous message like ngl with Nextjs,Graphql,Typescript"
-            imgUrl={p4}
-            bgColor="#3d5a80"
-            color="gray.50"
-            hoverColor="gray.400"
-            link="https://github.com/FarhanRafid97/ngl_clone"
           />
         </Flex>
         <Flex
@@ -100,6 +105,8 @@ const Home = () => {
             bgColor="#3d5a80"
             color="gray.50"
             hoverColor="gray.400"
+            borderRadius="15px"
+            widthImg="70%"
             link="https://frs-secret-shop.vercel.app/"
           />
 
@@ -109,7 +116,9 @@ const Home = () => {
             imgUrl={p5}
             bgColor="#3d5a80"
             color="gray.50"
+            borderRadius="15px"
             hoverColor="gray.400"
+            widthImg="70%"
             link="https://github.com/FarhanRafid97/chatt_app"
           />
         </Flex>

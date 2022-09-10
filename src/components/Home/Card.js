@@ -8,7 +8,17 @@ const ChakraBox = chakra(motion.div, {
   shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === 'children',
 });
 
-const Card = ({ title, body, imgUrl, bgColor, color, hoverColor, link }) => {
+const Card = ({
+  title,
+  body,
+  imgUrl,
+  bgColor,
+  color,
+  hoverColor,
+  link,
+  borderRadius,
+  widthImg,
+}) => {
   return (
     <Link
       className="linkPorto"
@@ -19,14 +29,15 @@ const Card = ({ title, body, imgUrl, bgColor, color, hoverColor, link }) => {
       bg={bgColor}
       transition="0.3s"
       color={color}
-      borderRadius="7px"
+      borderRadius="4px"
       _hover={{ color: hoverColor, textDecoration: 'none ' }}
     >
       <Flex
         direction="column"
         justifyContent="space-between "
+        minH={600}
         alignItems="center"
-        paddingBottom="5px"
+        paddingBottom="15px"
       >
         <Box w="100%" p="25px" mb={16}>
           <Flex alignItems="center">
@@ -55,8 +66,8 @@ const Card = ({ title, body, imgUrl, bgColor, color, hoverColor, link }) => {
 
         <Image
           className="imagePorto1"
-          borderRadius="15px"
-          w="70%"
+          borderRadius={borderRadius}
+          w={widthImg}
           src={imgUrl}
         />
       </Flex>

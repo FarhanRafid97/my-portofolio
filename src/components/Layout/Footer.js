@@ -44,7 +44,8 @@ const Footer = () => {
             />
             <IconButton
               as="a"
-              href="#"
+              href="https://twitter.com/farhanrafid97"
+              target="_blank"
               aria-label="Twitter"
               icon={<FaTwitter fontSize="1.25rem" />}
             />
