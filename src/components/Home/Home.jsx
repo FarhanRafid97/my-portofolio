@@ -119,7 +119,7 @@ const Home = () => {
             borderRadius="15px"
             hoverColor="gray.400"
             widthImg="70%"
-            link="https://github.com/FarhanRafid97/chatt_app"
+            link="https://my-chat-app-gamma.vercel.app/"
           />
         </Flex>
       </ChakraBox>
